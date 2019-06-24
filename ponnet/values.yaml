@@ -17,7 +17,7 @@ pull_docker_registry:
 
 images:
   pon0:
-    repository: gopinatht/pon0-network
+    repository: ciprian4enea/pon0-network
     tag: 'latest'
     pullPolicy: 'Always'
   

@@ -23,7 +23,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 image:
-  repository: 'xosproject/tosca-loader'
+  repository: 'iecedge/tosca-loader_arm64'
   tag: '{{ .Chart.AppVersion }}'
   pullPolicy: 'Always'
 

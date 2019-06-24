@@ -31,7 +31,7 @@ topology_template:
       type: tosca.nodes.Switch
       properties:
         driver: ofdpa-ovs
-        ipv4Loopback: 192.168.0.201
+        ipv4Loopback: 100.100.0.201
         ipv4NodeSid: 17
         isEdgeRouter: True
         name: leaf_1

@@ -194,7 +194,7 @@ spec:
         # Installs required 00-genie.conf and genie binary
         # on slave node.
         - name: install-cni
-          image: quay.io/huawei-cni-genie/genie-plugin:latest 
+          image: ciprian4enea/huawei-cni-genie-genie-plugin:latest 
           imagePullPolicy: Always 
           command: ["/launch.sh"]
           env:
@@ -247,7 +247,7 @@ spec:
       serviceAccountName: genie-plugin
       containers:
         - name: genie-network-admission-controller
-          image: quay.io/huawei-cni-genie/genie-admission-controller:latest
+          image: ciprian4enea/huawei-cni-genie-genie-admission-controller:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
@@ -309,7 +309,7 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: spec.nodeName
-          image: quay.io/huawei-cni-genie/genie-policy-controller:latest
+          image: ciprian4enea/huawei-cni-genie-genie-policy-controller:latest
           imagePullPolicy: Always
           command:
           - /genie-policy

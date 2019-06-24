@@ -15,19 +15,19 @@
 
 images:
   olt:
-    repository: 'voltha/voltha-ponsim'
+    repository: 'iecedge/voltha-ponsim_arm64'
     tag: '{{ .Chart.AppVersion }}'
     pullPolicy: 'Always'
   onu:
-    repository: 'voltha/voltha-ponsim'
+    repository: 'iecedge/voltha-ponsim_arm64'
     tag: '{{ .Chart.AppVersion }}'
     pullPolicy: 'Always'
   rg:
-    repository: 'voltha/voltha-tester'
+    repository: 'ciprian4enea/voltha-tester'
     tag: '{{ .Chart.AppVersion }}'
     pullPolicy: 'Always'
   pon0:
-    repository: 'gopinatht/pon0-network'
+    repository: 'ciprian4enea/pon0-network'
     tag: 'latest'
     pullPolicy: 'Always'
 

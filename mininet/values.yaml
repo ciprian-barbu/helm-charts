@@ -22,7 +22,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 image:
-  repository: ciena/mininet
+  repository: ciprian4enea/ciena-mininet
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -49,4 +49,4 @@ affinity:
 annotations:
   cni: "calico,pon1"
 
-onosOpenflowSvc: "onos-openflow.default.svc.cluster.local"
+onosOpenflowSvc: "cord-platform-onos-openflow.default.svc.cluster.local"
