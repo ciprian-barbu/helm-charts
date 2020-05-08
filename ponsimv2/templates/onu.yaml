@@ -30,7 +30,7 @@ spec:
          app: ponsim
          onu: onu{{ $i }}-{{ $j }}
        annotations:
-         cni: "calico,pon{{ $i }}.{{ $j }}"
+         cni: "flannel,pon{{ $i }}.{{ $j }}"
      spec:
        affinity:
         podAffinity:

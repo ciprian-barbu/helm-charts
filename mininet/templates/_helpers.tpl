@@ -51,7 +51,7 @@ Create chart name and version as used by the chart label.
 Generate the CNI annotations depending on number of OLTs
 */}}
 {{- define "mininet.cni" -}}
-{{- printf "calico" -}}
+{{- printf "flannel" -}}
 {{- range $i, $junk := until (.Values.numOlts|int) -}}
 {{- printf ",nni%d" $i -}}
 {{- end -}}

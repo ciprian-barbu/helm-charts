@@ -138,9 +138,10 @@ data:
     {
         "name": "k8s-pod-network",
         "type": "genie",
+        "cniVersion": "0.3.1",
         "log_level": "info",
         "datastore_type": "kubernetes",
-        "default_plugin": "calico",
+        "default_plugin": "flannel",
         "hostname": "__KUBERNETES_NODE_NAME__",
         "policy": {
             "type": "k8s",
@@ -207,6 +208,8 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
+            - name: CNI_CONF_NAME
+              value: "00-0genie.conf"
           volumeMounts:
             - mountPath: /host/opt/cni/bin
               name: cni-bin-dir
