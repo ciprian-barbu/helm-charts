@@ -30,13 +30,17 @@ spec:
   selector:
     olt: olt{{ $i }}
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: olt{{ $i }}
   namespace: {{ $.Values.global.namespace }}
 spec:
    replicas: 1
+   selector:
+     matchLabels:
+       app: ponsim
+       olt: olt{{ $i }}
    template:
      metadata:
        labels:

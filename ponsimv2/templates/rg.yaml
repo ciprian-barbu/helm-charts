@@ -17,13 +17,17 @@
 {{- range $i, $junk := until (.Values.numOlts|int) }}
 {{- range $j, $junk1 := until ($rgcount) }}
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rg{{ $i }}-{{ $j }}
   namespace: {{ $.Values.global.namespace }}
 spec:
    replicas: 1
+   selector:
+     matchLabels:
+       app: ponsim
+       rg: rg{{ $i }}-{{ $j }}
    template:
      metadata:
        labels:

@@ -27,13 +27,16 @@ spec:
   selector:
     app: voltha
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: voltha
   namespace: {{ .Values.global.namespace }}
 spec:
   replicas: {{ .Values.replicas.envoy_for_etcd }}
+  selector:
+    matchLabels:
+      app: voltha
   template:
     metadata:
       labels:
