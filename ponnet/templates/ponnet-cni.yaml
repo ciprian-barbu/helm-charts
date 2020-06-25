@@ -57,6 +57,11 @@ rules:
       - update
       - create
       - delete
+  - apiGroups: ['policy']
+    resources: ['podsecuritypolicies']
+    verbs:     ['use']
+    resourceNames:
+      - seba-policy
 
 ---
 kind: ClusterRoleBinding
